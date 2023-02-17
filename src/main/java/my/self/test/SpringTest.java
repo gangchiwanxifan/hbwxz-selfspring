@@ -9,6 +9,6 @@ public class SpringTest {
         AnnotationConfigApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(AppConfig.class);
         // 调用getBean
-        applicationContext.getBean("");
+        // applicationContext.getBean("");
     }
 }
