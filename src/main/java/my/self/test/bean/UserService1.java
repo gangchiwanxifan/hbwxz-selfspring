@@ -4,6 +4,6 @@ import my.self.spring.annotation.Scope;
 import my.self.spring.annotation.Service;
 
 @Service
-@Scope("prototype")
-public class UserService {
+@Scope("singleton")
+public class UserService1 {
 }
