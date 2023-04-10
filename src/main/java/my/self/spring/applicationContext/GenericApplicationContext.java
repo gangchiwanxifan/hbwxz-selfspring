@@ -26,7 +26,20 @@ public class GenericApplicationContext implements BeanDefinitionRegistry {
         finishBeanFactoryInit(beanFactory);
     }
 
+    private void finishBeanFactoryInit(DefaultListableBeanFactory beanFactory) {
+        beanFactory.preInstantiateSingleton();
+    }
+
+    private void invokeBeanFactoryPostProcessors(DefaultListableBeanFactory beanFactory) {
+        // 
+        beanFactory.doScan();
+    }
+
     private DefaultListableBeanFactory obtainBeanFactory() {
         return this.beanFactory;
+    }
+
+    public Object getBean(String beanName) {
+        return this.beanFactory.getBean(beanName);
     }
 }

@@ -9,6 +9,11 @@ public class SpringTest {
         AnnotationConfigApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(AppConfig.class);
         // 调用getBean
-        // applicationContext.getBean("");
+        System.out.println(applicationContext.getBean("userService"));
+        System.out.println(applicationContext.getBean("userService"));
+
+        // 单例的，每次获取都是一样的地址值
+        System.out.println(applicationContext.getBean("userService1"));
+        System.out.println(applicationContext.getBean("userService1"));
     }
 }
